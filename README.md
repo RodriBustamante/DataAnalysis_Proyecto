@@ -66,8 +66,6 @@ Las tablas iniciales son tomadas del sistema de Punto de Venta de los locales de
 
 En total tengo dos informes AVM separados, por la limitación de descarga en el software de la empresa. El primer informe contiene las transacciones del Sur y Centro, mientras que el último solo las del Norte. Además, de otra tabla, voy a sacar los datos de Stock, no porque necesita algo de stock particulamente sino porque de allí puedo sacar la linea de los productos, dato interesante para hacer análisis.
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/ETL/Bronze_Layer4)
-
 Entonces debo unir tanto AVM_Norte con AVM_CentroSur cómo Stock_Norte con Stock_CentroSur, el objetivo es lograr una tabla base que sirva como capa de bronce. A partir de la misma, se realizará la capa de plata con menor granularidad y más enfocado al plan de métricas.
 
 **Stock: me permite tener la lista de artículos separados por línea**

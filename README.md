@@ -46,7 +46,7 @@ El plan de métricas fue enfocado en obtener la mejor información para que la s
 
 En un inicio el modelo de datos era el siguiente:
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/Modelo%20de%20Datos.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/Datamart.png)
 
 A medida que fui progresando en el desarrollo y probando como daban los datos, concluí que los datos relevados en las tablas por DIM_ARTICULOS, generaban ciertos errores, por lo que decídi crear una tabla de hechos relacionada directamente con los artículos. Quedando el modelo de datos de la sigueinte forma:
 

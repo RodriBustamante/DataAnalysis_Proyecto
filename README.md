@@ -23,7 +23,7 @@ En un inicio dos tablas como fuentes de datos, basadas en los puntos de venta de
 
 **Análisis de Venta**
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/ETL/Bronze_Layer2.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/ETL/Bronze_Layer2.png)
 
 Esta fuente de datos, tiene todas las transacciones de los puntos de venta de cada local, con datos asociados fundamentales para el análisis de ventas y financiero.
 

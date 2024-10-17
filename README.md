@@ -31,7 +31,7 @@ Esta fuente de datos, tiene todas las transacciones de los puntos de venta de ca
 
 El plan de métricas fue enfocado en obtener la mejor información para que la supervisión pueda corroborar la productividad en ventas de cada equipo.
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/Plan_Métricas.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/Plan_Métricas.png)
 
 [Link al Plan](https://docs.google.com/spreadsheets/d/1gcPnxIB98Yn8IsfQwROQ-1OX1a7pq0O_wbsURNq8oJc/edit?usp=sharing)
 
@@ -46,27 +46,27 @@ El plan de métricas fue enfocado en obtener la mejor información para que la s
 
 En un inicio el modelo de datos era el siguiente:
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/Modelo%20de%20Datos.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/Modelo%20de%20Datos.png)
 
 A medida que fui progresando en el desarrollo y probando como daban los datos, concluí que los datos relevados en las tablas por DIM_ARTICULOS, generaban ciertos errores, por lo que decídi crear una tabla de hechos relacionada directamente con los artículos. Quedando el modelo de datos de la sigueinte forma:
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/Modelo_Datos2.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/Modelo_Datos2.png)
 
 ## ETL
 
 **Data Flow**
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/DataFlow2.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/DataFlow2.png)
 
 ### Bronze Layer
 
 Las tablas iniciales son tomadas del sistema de Punto de Venta de los locales del Norte, Centro y Sur. Las mismas contienen datos en una venta de tiempo de entre un año para el caso de AVM y de más de 10 años para el caso de Stock. Las columnas que pertenecen a estas tablas son:
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/ETL/Bronze_Layer.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/ETL/Bronze_Layer.png)
 
 En total tengo dos informes AVM separados, por la limitación de descarga en el software de la empresa. El primer informe contiene las transacciones del Sur y Centro, mientras que el último solo las del Norte. Además, de otra tabla, voy a sacar los datos de Stock, no porque necesita algo de stock particulamente sino porque de allí puedo sacar la linea de los productos, dato interesante para hacer análisis.
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/ETL/Bronze_Layer4)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/ETL/Bronze_Layer4)
 
 Entonces debo unir tanto AVM_Norte con AVM_CentroSur cómo Stock_Norte con Stock_CentroSur, el objetivo es lograr una tabla base que sirva como capa de bronce. A partir de la misma, se realizará la capa de plata con menor granularidad y más enfocado al plan de métricas.
 
@@ -169,7 +169,7 @@ Concluye el desarrollo de las tablas en la capa de plata.
 
 **Big Query**
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/BigQuery.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/BigQuery.png)
 
 La última etapa se realizó casi en su totalidad den bigquery, salvo por necesidades se modificaron las tablas para aprovechar más los datos. Para armar la capa de oro, voy a seguir la estructura del modelo de datos, con las tablas de hechos y las tablas de dimensiones correspondientes.
 
@@ -317,7 +317,7 @@ Surge de la necesidad de separa las facturas de cada artículo que se vendio en 
 
 **PowerQuery**
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/PowerQuery.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/PowerQuery.png)
 
 Al terminar la etapa en BigQuery, necesite agregar ciertas columnas a algunas dimensiones para poder segmentar mejor los datos y darles una mejor visualización.
 
@@ -325,15 +325,15 @@ Al terminar la etapa en BigQuery, necesite agregar ciertas columnas a algunas di
 
 Lo hice de manera manual, ya que era muy difícil distinguir cada uno
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/ETL/Gold_LayerPQ4.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/ETL/Gold_LayerPQ4.png)
 
 **Agregar datos a la tabla calendario, como la segmentación de horas, para obtener datos más fáciles de leer de la actividad**
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/ETL/Gold_LayerPQ5.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/ETL/Gold_LayerPQ5.png)
 
 La query que utilice fue la siguiente:
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/ETL/Gold_LayerPQ6.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/ETL/Gold_LayerPQ6.png)
 
 ## Desarrollo del Dashboard de Ventas para la Supervisión
 
@@ -341,19 +341,19 @@ A partir de aquí comence con las medidas DAX, para poder verificar las hipotes�
 
 *Suma de los importes de cada transacción realizada en los puntos de venta*
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/DAX/SumImporte.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/DAX/SumImporte.png)
 
 *Cálculo de las unidades vendidas por cada factura*
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/DAX/Productividad.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/DAX/Productividad.png)
 
 *Cálculo del ticket promedio, que es el importe total sobre las facturas emitidas*
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/DAX/TKTpromedio.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/DAX/TKTpromedio.png)
 
 *Suma de la cantidad de articulos vendidos por factura*
 
-![](https://github.com/RodriBustamante/DataAnalysis_Proyectos/blob/main/imagenes/DAX/ContarArtículos.png)
+![](https://github.com/RodriBustamante/DataAnalysis_Proyecto/blob/main/imagenes/DAX/ContarArtículos.png)
 
 
 ### Dashboard
@@ -374,7 +374,7 @@ Esta página está diseñada para mostrar los montos detallados según los difer
 **CLIENTES**
 En esta hoja se presenta un análisis enfocado en los clientes, mostrando los montos de compras por cliente con mayores montos. Esto facilita el seguimiento de los clientes frecuentes y permite identificar patrones de fidelización. Además, ofrece insights sobre aquellos clientes que podrían necesitar un impulso adicional para volver a comprar.
 
-[Link al Dashboard](https://rodribustamante.github.io/DataAnalysis_Proyectos/Reporte.html)
+[Link al Dashboard](https://rodribustamante.github.io/DataAnalysis_Proyecto/Reporte.html)
 
 ## Conclusión
 
@@ -395,5 +395,5 @@ En esta hoja se presenta un análisis enfocado en los clientes, mostrando los mo
 
 [Link al Plan](https://docs.google.com/spreadsheets/d/1gcPnxIB98Yn8IsfQwROQ-1OX1a7pq0O_wbsURNq8oJc/edit?usp=sharing)
 
-[Link al Dashboard](https://rodribustamante.github.io/DataAnalysis_Proyectos/Reporte.html)
+[Link al Dashboard](https://rodribustamante.github.io/DataAnalysis_Proyecto/Reporte.html)
 

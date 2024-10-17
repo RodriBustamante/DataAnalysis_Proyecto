@@ -374,7 +374,7 @@ Esta página está diseñada para mostrar los montos detallados según los difer
 **CLIENTES**
 En esta hoja se presenta un análisis enfocado en los clientes, mostrando los montos de compras por cliente con mayores montos. Esto facilita el seguimiento de los clientes frecuentes y permite identificar patrones de fidelización. Además, ofrece insights sobre aquellos clientes que podrían necesitar un impulso adicional para volver a comprar.
 
-[Link al Dashboard](https://rodribustamante.github.io/DataAnalysis_Proyectos/Reporte.html)
+[Link al Dashboard](https://rodribustamante.github.io/DataAnalysis_Proyecto/Reporte.html)
 
 ## Conclusión
 
@@ -395,38 +395,6 @@ En esta hoja se presenta un análisis enfocado en los clientes, mostrando los mo
 
 [Link al Plan](https://docs.google.com/spreadsheets/d/1gcPnxIB98Yn8IsfQwROQ-1OX1a7pq0O_wbsURNq8oJc/edit?usp=sharing)
 
-[Link al Dashboard](https://rodribustamante.github.io/DataAnalysis_Proyectos/Reporte.html)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Link al Dashboard](https://rodribustamante.github.io/DataAnalysis_Proyecto/Reporte.html)
 
 
